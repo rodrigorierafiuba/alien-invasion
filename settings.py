@@ -1,5 +1,5 @@
-HEIGHT = 1920
-WIDTH = 1080
+WIDTH = 1280
+HEIGHT = 720
 COLOR_X = 230
 COLOR_Y = 230
 COLOR_Z = 230
@@ -9,6 +9,11 @@ class Settings:
 
     def __init__(self):
         """Initialize game settings."""
-        self.screen_width = HEIGHT
-        self.screen_height = WIDTH
+        # Window Settings
+        self.screen_width = WIDTH
+        self.screen_height = HEIGHT
         self.bg_color = (COLOR_X, COLOR_Y, COLOR_Z)
+
+        # Ship Settings
+        self.ship_speed = 1.5
+        
