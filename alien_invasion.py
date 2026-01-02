@@ -3,6 +3,7 @@ import pygame
 from settings import Settings
 from ship import Ship
 from bullet import Bullet
+from alien import Alien
 
 FRAME_RATE = 60
 
@@ -24,6 +25,9 @@ class AlienInvasion:
         
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
+        self.aliens = pygame.sprite.Group()
+
+        self._create_fleet()
 
     
     def run_game(self):
@@ -71,7 +75,29 @@ class AlienInvasion:
         if (len(self.bullets) < self.settings.bullets_allowed):
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
-    
+
+    def _create_fleet(self):
+        """Create the fleet of aliens."""
+        alien = Alien(self)
+        current_x, current_y = alien_width, alien_height = alien.rect.size
+        
+        # Spacing between aliens is one alien width and one alien height.
+        while (current_y < (self.settings.screen_height - (3 * alien_height))):
+            while (current_x < (self.settings.screen_width - (2 * alien_width))):
+                self._create_alien(current_x, current_y)
+                current_x += (2 * alien_width)
+            # Finished a row; reset x value, and increment y value.
+            current_x = alien_width
+            current_y += (3 * alien_height)
+        
+    def _create_alien(self, x_position, y_position):
+        """Create an alien and place it in the row."""
+        new_alien = Alien(self)
+        new_alien.x = x_position
+        new_alien.rect.x = x_position
+        new_alien.rect.y = y_position
+        self.aliens.add(new_alien)
+
     def _update_bullets(self):
         """Update position of bullets and get rid of old bullets."""
         self.bullets.update()
@@ -87,6 +113,7 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
 
+        self.aliens.draw(self.screen)
         self.ship.blitme()
 
         # Make the most recently drawn screen visible
