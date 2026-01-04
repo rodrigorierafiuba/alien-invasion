@@ -10,6 +10,7 @@ BULLET_COLOR_Y = 60
 BULLET_COLOR_Z = 60
 
 SHIP_SPEED = 1.5
+SHIP_LIMIT = 3
 
 BULLET_SPEED = 2.5
 BULLET_WIDTH = 3
@@ -30,6 +31,7 @@ class Settings:
 
         # Ship Settings
         self.ship_speed = SHIP_SPEED
+        self.ship_limit = SHIP_LIMIT
         
         # Bullet settings
         self.bullet_speed = BULLET_SPEED
