@@ -20,6 +20,12 @@ BULLETS_ALLOWED = 10
 ALIEN_SPEED = 1.0
 DROP_SPEED = 10
 
+SPEEDUP_SCALE = 1.1
+
+EASY_DIFFICULTY = "Easy"
+NORMAL_DIFFICULTY = "Normal"
+HARD_DIFFICULTY = "Hard"
+
 class Settings:
     """A class to store all settings for Alien Invasion game."""
     def __init__(self):
@@ -30,19 +36,45 @@ class Settings:
         self.bg_color = (COLOR_X, COLOR_Y, COLOR_Z)
 
         # Ship Settings
-        self.ship_speed = SHIP_SPEED
+
         self.ship_limit = SHIP_LIMIT
         
         # Bullet settings
-        self.bullet_speed = BULLET_SPEED
         self.bullet_width = BULLET_WIDTH
         self.bullet_height = BULLET_HEIGHT
         self.bullet_color = (BULLET_COLOR_X, BULLET_COLOR_Y, BULLET_COLOR_Z)
         self.bullets_allowed = BULLETS_ALLOWED
 
         # Alien Settings
-        self.alien_speed = ALIEN_SPEED
         self.fleet_drop_speed = DROP_SPEED
-        
+
+        # Difficulty
+        self.difficulty = ""
+
+        # How quickly the game speeds up
+        self.speedup_scale = SPEEDUP_SCALE
+        self.initialize_dynamic_settings()
+    
+    def initialize_dynamic_settings(self):
+        """Initialize settings that change throughout the game."""
+        if (self.difficulty == EASY_DIFFICULTY):
+            self.ship_speed = SHIP_SPEED
+            self.bullet_speed = BULLET_SPEED
+            self.alien_speed = ALIEN_SPEED
+        elif (self.difficulty == NORMAL_DIFFICULTY):
+            self.ship_speed = SHIP_SPEED + 1
+            self.bullet_speed = BULLET_SPEED
+            self.alien_speed = ALIEN_SPEED + 0.5
+        elif (self.difficulty == HARD_DIFFICULTY):
+            self.ship_speed = SHIP_SPEED + 1.5
+            self.bullet_speed = BULLET_SPEED
+            self.alien_speed = ALIEN_SPEED + 1.0
+
         # fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
+       
+    def increase_speed(self):
+        """Increase speed settings."""
+        self.ship_speed *= self.speedup_scale
+        self.bullet_speed *= self.speedup_scale
+        self.alien_speed *= self.speedup_scale

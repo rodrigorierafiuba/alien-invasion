@@ -43,6 +43,11 @@ class Button:
         self.msg_image_rect = self.msg_image.get_rect()
         self.msg_image_rect.center = self.rect.center
     
+    def update_msg(self):
+        """If the button has been moved, the text has to move also."""
+        self.msg_image_rect.center = self.rect.center
+
+    
     def draw_button(self):
         """Draw blanck button and then draw message."""
         self.screen.fill(self.button_color, self.rect)
