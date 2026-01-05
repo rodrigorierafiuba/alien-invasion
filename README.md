@@ -12,7 +12,13 @@ You will need Pygame library for play the game, you can do the following prompt 
 - `pip install -r requirements.txt`
 
 # 📨 Project description
-Welcome to a arcade game in 2D, created in Python using Pygame library, where the Aliens have only one objective, to invade your planet, but you have the opportunity of defend it with your ship.
+Welcome to a arcade game in 2D, created in Python using Pygame library, where the Aliens have only one objective, to invade your planet, but you have the opportunity to defend it with your ship.
+
+- **Choose a difficulty**:
+  <img width="540" height="540" alt="image" src="https://github.com/user-attachments/assets/ee2295e0-eaf1-41f5-b5fc-734a65cd4939" />
+  
+- **Kill the aliens before they get to you!**
+  <img width="540" height="540" alt="image" src="https://github.com/user-attachments/assets/484c125d-97a9-468d-95be-6b0642accd74" />
 
 # 🚀 How to play
 Your ship can move to the right or to the left and you can shoot while being stand or moving.
