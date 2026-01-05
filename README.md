@@ -8,8 +8,7 @@
 
 # Instalation
 You will need Pygame library for play the game, you can do the following prompt in your terminal window or VS Code terminal:
-1. Install requirements: `pip install -r requirements.txt`
-
+`pip install -r requirements.txt`
 
 # 📨 Project description
 Welcome to a arcade game in 2D, created in Python using Pygame library, where the Aliens have only one objective, to invade your planet, but you have the opportunity of defend it with your ship.
