@@ -5,6 +5,7 @@
 * [Project Description](#Project-description)
 * [How to Play](#How-to-play)
 * [Challenges](#Challenges)
+* [Global Ranking](#Global-ranking)
 
 # Instalation
 You will need Pygame library for play the game, you can do the following prompt in your terminal window or VS Code terminal:
@@ -25,6 +26,11 @@ Also, you have 3 difficulties:
 - Easy: Really easy
 - Normal: A bit challenging
 - Hard: If you can win in this difficulty and get to level 3 at least, let me tell you that you're savage!.
+
+# 👽 Global Ranking
+You can send me via message your high score with a photo so i can upload the rank, maybe in the future i add a rank.
+
+1. Agus Macio - High Score: 30,920,850 - Difficulty: Hard.
 
 
 
