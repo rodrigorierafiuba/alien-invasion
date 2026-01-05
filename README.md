@@ -30,7 +30,7 @@ Also, you have 3 difficulties:
 # 👽 Global Ranking
 You can send me via message your high score with a photo so i can upload the rank, maybe in the future i add a rank.
 
-1. Agus Macio - High Score: 30,920,850 - Difficulty: Hard.
+1. **Agus Macio - High Score: 30,920,850 - Difficulty: Hard.**
 
 
 
