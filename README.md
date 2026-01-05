@@ -37,7 +37,7 @@ Also, you have 3 difficulties:
 To be included in the game's ranking, you can send me your highest score via message, and I'll add it to the ranking that will be published in the repository.
 
 1. **Agus Macio - High Score: 30,920,850 - Difficulty: Hard.**
-2. **Rodrigo Riera - High Score: 15,300,800 - Difficulty: Hard**
+2. **Rodrigo Riera - High Score: 15,300,800 - Difficulty: Hard.**
 
 
 
