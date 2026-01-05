@@ -7,9 +7,8 @@
 * [Challenges](#Challenges)
 
 # Instalation
-You will need Pygame library for play the game, you can do the following prompts in your terminal window:
+You will need Pygame library for play the game, you can do the following prompt in your terminal window or VS Code terminal:
 1. Install requirements: `pip install -r requirements.txt`
-2. Install the library: `pip install pygame`
 
 
 # 📨 Project description
