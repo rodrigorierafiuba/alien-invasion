@@ -132,8 +132,7 @@ class AlienInvasion:
         elif (event.key == pygame.K_LEFT):
             self.ship.moving_left = True
         elif (event.key == pygame.K_q):
-            sys.exit()
-            
+            sys.exit()   
         elif (event.key == pygame.K_SPACE):
             self._fire_bullet()
     
@@ -154,7 +153,6 @@ class AlienInvasion:
         """Create the fleet of aliens."""
         alien = Alien(self)
         current_x, current_y = alien_width, alien_height = alien.rect.size
-        print(alien.rect.size)
         
         # Spacing between aliens is one alien width and one alien height.
         while (current_y < (self.settings.screen_height - (4 * alien_height))):
@@ -195,11 +193,13 @@ class AlienInvasion:
         collisions = pygame.sprite.groupcollide(
             self.bullets, self.aliens, True, True
         )
-
         self.sb.update_score(collisions)
         self.sb.prep_score()
         self.sb.check_high_score()
-
+        self._check_aliens_existency()
+    
+    def _check_aliens_existency(self):
+        """Check if there's aliens in the canvas."""
         if (not self.aliens):
             # Destroy existing bullets and create new fleet.
             self.bullets.empty()
@@ -209,7 +209,7 @@ class AlienInvasion:
             # Increase level
             self.sb.update_level()
             self.sb.prep_level()
-  
+
     def _check_aliens_bottom(self):
         """Check if any aliens have reached to the bottom of the screen."""
         for alien in self.aliens.sprites():

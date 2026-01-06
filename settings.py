@@ -38,7 +38,6 @@ class Settings:
         self.bg_color = (COLOR_X, COLOR_Y, COLOR_Z)
 
         # Ship Settings
-
         self.ship_limit = SHIP_LIMIT
         
         # Bullet settings
